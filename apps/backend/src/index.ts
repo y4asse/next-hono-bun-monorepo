@@ -13,9 +13,7 @@ export type Env = {
 const app = new Hono<{ Bindings: Env }>();
 
 app.use('*', cors({
-  origin: ['*'],
-  allowMethods: ['*'],
-  allowHeaders: ['*'],
+  origin: '*',
 }))
 
 const todoSchema = z.object({
